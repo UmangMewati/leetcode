@@ -9,13 +9,10 @@ class Solution {
         int size1 = 0;
         int size2 = 0;
 
-        // First element goes to arr1
         arr1[size1++] = nums[0];
 
-        // Second element goes to arr2
         arr2[size2++] = nums[1];
 
-        // Distribute remaining elements
         for (int i = 2; i < n; i++) {
 
             if (arr1[size1 - 1] > arr2[size2 - 1]) {
@@ -25,7 +22,6 @@ class Solution {
             }
         }
 
-        // Combine arr1 and arr2
         int[] result = new int[n];
 
         int index = 0;
