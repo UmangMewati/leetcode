@@ -1,9 +1,8 @@
 class Solution {
     public int minimumDeletions(int[] nums) {
         int n = nums.length;
-
-        int minIndex = 0;
         int maxIndex = 0;
+        int minIndex = 0;
 
         for (int i = 1; i < n; i++) {
             if (nums[i] < nums[minIndex]) {
@@ -19,6 +18,7 @@ class Solution {
             int temp = minIndex;
             minIndex = maxIndex;
             maxIndex = temp;
+
         }
 
         int fromFront = maxIndex + 1;
